@@ -1,2 +1,2 @@
 # K-R---C-Exercise
-My work.
+My solutions to exercise problems.
