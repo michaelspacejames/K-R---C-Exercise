@@ -2,21 +2,21 @@
 
 int main(void)
 {
-	int c, count = 0;
+	int c, pc = EOF;
 
 	while((c = getchar()) != EOF)
 	{	
 		
-		if(c != ' ')
+		if(c == ' ')
 		{	
-			if(count >= 1)   // appropriating 
-				printf(" "); // number of blanks to a single blank
-			putchar(c);
-			count = 0;
+			if(pc != ' ')   	// Logic: Don't copy input character when two blanks are consecutive
+				putchar(c);
 		}
 
-		if(c == ' ')
-			count++; // count the number of blanks
+		if(c != ' ')
+			putchar(c);
+
+		pc = c;
 
 	}
 
